@@ -1,0 +1,22 @@
+﻿query RegionQuery {
+  regions {
+    id
+    regionDescription
+  }
+  regionById(id: 2) {
+    id
+    regionDescription
+  }
+  addRegion(region: { id: 0, regionDescription: "Myanmar" }) {
+    id
+    regionDescription
+  }
+  updateRegion(id: 7, region: { id : 0, regionDescription : "English"}) {
+    id
+    regionDescription
+  }
+  deleteRegion(id: 8) {
+     id
+    regionDescription
+  }
+}

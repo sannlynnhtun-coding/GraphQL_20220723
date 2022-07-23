@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using GraphQL_20220723.Models;
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
 namespace GraphQL_20220723.EFDbContext
@@ -20,12 +21,5 @@ namespace GraphQL_20220723.EFDbContext
         }
 
         public DbSet<Region> Region { get; set; }
-    }
-
-    public class Region
-    {
-        [Key]
-        public int Id { get; set; }
-        public string RegionDescription { get; set; }
     }
 }
