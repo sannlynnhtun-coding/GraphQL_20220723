@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace GraphQL_20220723.EFDbContext
 {
-    public class AppDbContext : DbContext
+    public class AppDbContext : DbContext, IAppDbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

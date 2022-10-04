@@ -6,15 +6,23 @@ namespace GraphQL_20220723.Queries
 {
     public class RegionQuery
     {
+        //private readonly IAppDbContext db;
+        //public RegionQuery(IAppDbContext db)
+        //{
+        //    this.db = db;
+        //}
+
         public async Task<IEnumerable<Region>> GetRegions()
         {
             var lst = await new AppDbContext().Region.ToListAsync();
+            //var lst = await db.Region.ToListAsync();
             return lst;
         }
 
         public async Task<Region> GetRegionById(int id)
         {
             var item = await new AppDbContext().Region.Where(x => x.Id == id).FirstOrDefaultAsync();
+            //var item = await db.Region.Where(x => x.Id == id).FirstOrDefaultAsync();
             return item;
         }
 

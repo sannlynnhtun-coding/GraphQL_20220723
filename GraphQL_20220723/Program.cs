@@ -10,6 +10,9 @@ namespace GraphQL_20220723
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            //builder.Services.AddSingleton<IAppDbContext, AppDbContext>();
+            //builder.Services.AddScoped<IAppDbContext, AppDbContext>();
+
             builder.Services.AddGraphQLServer().AddQueryType<RegionQuery>();
 
             var app = builder.Build();
